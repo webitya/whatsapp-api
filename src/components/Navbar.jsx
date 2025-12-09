@@ -49,7 +49,7 @@ const Navbar = () => {
                                 className="object-cover"
                             />
                         </div>
-                        <span className="text-xl font-bold text-white tracking-tight group-hover:text-brand-green transition-colors hidden sm:block flex items-end">
+                        <span className="text-xl font-bold text-white tracking-tight group-hover:text-brand-green transition-colors flex items-end">
                             Webitya<span className="text-brand-green text-3xl leading-none">.</span>
                         </span>
                     </Link>
