@@ -67,7 +67,7 @@ const Footer = () => {
 
                 <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-gray-500 text-sm">
-                        &copy; {new Date().getFullYear()} Webitya Digital. All rights reserved.
+                        &copy; {new Date().getFullYear()} Webitya. All rights reserved.
                     </p>
                     <div className="flex gap-4">
                         {/* Socials could go here */}

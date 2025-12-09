@@ -6,14 +6,14 @@ import Lenis from "lenis";
 export default function SmoothScroll({ children }) {
     useEffect(() => {
         const lenis = new Lenis({
-            duration: 2.0, // Ultra smooth (default is 1.2)
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+            duration: 2.5, // "Feather touch" extreme smoothness
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             direction: "vertical",
             gestureDirection: "vertical",
             smooth: true,
-            mouseMultiplier: 1,
-            smoothTouch: false,
-            touchMultiplier: 2,
+            mouseMultiplier: 0.8, // Lower multiplier for heavier, smoother feel
+            smoothTouch: true, // Enable smooth touch for "feature touch" on mobile
+            touchMultiplier: 1.5,
         });
 
         function raf(time) {
