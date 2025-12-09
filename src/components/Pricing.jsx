@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import CheckIcon from "@mui/icons-material/Check";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Link from "next/link";
-import { useState } from "react";
+
 import MagneticButton from "./MagneticButton";
 
 const Pricing = () => {
-    const [isYearly, setIsYearly] = useState(false);
+
 
     return (
         <section id="pricing" className="py-24 sm:py-32 relative overflow-hidden bg-zinc-950">
@@ -20,30 +20,6 @@ const Pricing = () => {
                     <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-white">Simple Pricing. <span className="text-gray-500">No Surprises.</span></h2>
                     <p className="text-gray-400 text-base sm:text-lg mb-10">Pay only for what you use. Zero hidden fees.</p>
 
-                    {/* Toggle Switch */}
-                    <div className="flex items-center justify-center gap-6 mb-12">
-                        <span className={`text-base font-bold transition-all duration-300 ${!isYearly ? "text-white scale-105" : "text-gray-500"}`}>Monthly</span>
-
-                        <button
-                            onClick={() => setIsYearly(!isYearly)}
-                            className="w-16 h-8 bg-zinc-800 rounded-full p-1 relative transition-colors hover:bg-zinc-700 focus:outline-none cursor-pointer ring-1 ring-white/10"
-                            aria-label="Toggle Monthly or Yearly Billing"
-                            aria-pressed={isYearly}
-                        >
-                            <motion.div
-                                animate={{ x: isYearly ? 32 : 0 }}
-                                transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                                className="w-6 h-6 bg-brand-green rounded-full shadow-[0_0_15px_rgba(37,211,102,0.5)]"
-                            />
-                        </button>
-
-                        <span className={`text-base font-bold transition-all duration-300 flex items-center gap-2 ${isYearly ? "text-white scale-105" : "text-gray-500"}`}>
-                            Yearly
-                            <span className="px-2 py-0.5 rounded-full bg-brand-green/20 text-brand-green text-[10px] font-black uppercase tracking-wider border border-brand-green/30">
-                                Best Value
-                            </span>
-                        </span>
-                    </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
