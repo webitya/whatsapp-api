@@ -56,15 +56,15 @@ export async function POST(req) {
                 <div class="header">
                     <div class="logo">Webitya<span>.</span></div>
                 </div>
-                <div class="content">
+                <div class="content" style="color: #ffffff;">
                     <h1 style="color: #25D366; margin-top: 0;">You're In! 🚀</h1>
-                    <p>Hi ${name},</p>
-                    <p>Thanks for exploring <strong>Webitya</strong>. We've received your inquiry and are excited to show you how WhatsApp Automation can scale your business <strong>3x faster</strong>.</p>
-                    <p>Our team is reviewing your details and will reach out shortly on—you guessed it—WhatsApp!</p>
+                    <p style="color: #e2e8f0; font-size: 16px; margin-bottom: 16px;">Hi ${name},</p>
+                    <p style="color: #e2e8f0; font-size: 16px; margin-bottom: 24px;">Thanks for exploring <strong style="color: #ffffff;">Webitya</strong>. We've received your inquiry and are excited to show you how WhatsApp Automation can scale your business <strong style="color: #ffffff;">3x faster</strong>.</p>
+                    <p style="color: #e2e8f0; font-size: 16px; margin-bottom: 32px;">Our team is reviewing your details and will reach out shortly on—you guessed it—WhatsApp!</p>
                     <div style="text-align: center; margin: 30px 0;">
-                        <a href="https://wa.digital.webitya.in" class="btn">Visit Dashboard</a>
+                        <a href="https://wa.digital.webitya.in" class="btn" style="color: #000000;">Visit Dashboard</a>
                     </div>
-                    <p style="color: #888; font-size: 14px;">In the meantime, feel free to reply to this email if you have urgent questions.</p>
+                    <p style="color: #94a3b8; font-size: 14px;">In the meantime, feel free to reply to this email if you have urgent questions.</p>
                 </div>
                 <div class="footer">
                     &copy; ${new Date().getFullYear()} Webitya. All rights reserved.<br>
