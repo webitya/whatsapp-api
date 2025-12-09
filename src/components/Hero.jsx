@@ -398,16 +398,16 @@ const Hero = () => {
                         </p>
 
                         {/* Buttons */}
-                        <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                            <Link href="#book-demo">
-                                <MagneticButton className="px-8 py-4 sm:px-10 sm:py-5 bg-brand-green text-black font-extrabold text-base sm:text-lg rounded-full shadow-[0_0_50px_rgba(37,211,102,0.4)] flex items-center gap-2 sm:gap-3 relative overflow-hidden group" aria-label="Start Free Demo">
+                        <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start w-full sm:w-auto">
+                            <Link href="#book-demo" className="w-full sm:w-auto">
+                                <MagneticButton className="w-full sm:w-auto px-8 py-4 sm:px-10 sm:py-5 bg-brand-green text-black font-extrabold text-base sm:text-lg rounded-full shadow-[0_0_50px_rgba(37,211,102,0.4)] flex items-center justify-center gap-2 sm:gap-3 relative overflow-hidden group" aria-label="Start Free Demo">
                                     <span className="relative z-10 flex items-center gap-2">Start Free Demo <ArrowForwardIcon aria-hidden="true" /></span>
                                     <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
                                 </MagneticButton>
                             </Link>
 
-                            <Link href="#how-it-works">
-                                <MagneticButton className="px-8 py-4 sm:px-10 sm:py-5 bg-white/5 backdrop-blur-xl border border-white/10 text-white font-bold text-base sm:text-lg rounded-full hover:bg-white/10 transition-all" aria-label="See How It Works">
+                            <Link href="#how-it-works" className="w-full sm:w-auto">
+                                <MagneticButton className="w-full sm:w-auto px-8 py-4 sm:px-10 sm:py-5 bg-white/5 backdrop-blur-xl border border-white/10 text-white font-bold text-base sm:text-lg rounded-full hover:bg-white/10 transition-all flex items-center justify-center" aria-label="See How It Works">
                                     See How It Works
                                 </MagneticButton>
                             </Link>
@@ -434,7 +434,7 @@ const Hero = () => {
                         initial={{ opacity: 0, rotateY: 30, x: 100 }}
                         animate={{ opacity: 1, rotateY: 0, x: 0 }}
                         transition={{ duration: 1, ease: "circOut" }}
-                        className="relative hidden lg:block perspective-1000 h-[450px] lg:h-[550px] w-full lg:mt-12"
+                        className="relative perspective-1000 h-[350px] sm:h-[450px] lg:h-[550px] w-full mt-12 lg:mt-12"
                         aria-hidden="true"
                     >
                         <DashboardSimulation />
