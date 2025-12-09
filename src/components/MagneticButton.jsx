@@ -27,7 +27,7 @@ export default function MagneticButton({ children, className = "", onClick }) {
             onMouseMove={handleMouse}
             onMouseLeave={reset}
             onClick={onClick}
-            className={`${className}`}
+            className={`${className} cursor-pointer`}
         >
             {children}
         </motion.button>

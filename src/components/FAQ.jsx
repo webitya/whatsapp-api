@@ -47,7 +47,9 @@ const FAQ = () => {
                         >
                             <button
                                 onClick={() => setActiveIndex(activeIndex === index ? null : index)}
-                                className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors"
+                                className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors cursor-pointer"
+                                aria-expanded={activeIndex === index}
+                                aria-controls={`faq-answer-${index}`}
                             >
                                 <span className="text-lg font-medium text-white">{item.question}</span>
                                 <span className={`text-brand-green transition-transform duration-300 ${activeIndex === index ? "rotate-180" : ""}`}>
@@ -63,7 +65,7 @@ const FAQ = () => {
                                         exit={{ height: 0, opacity: 0 }}
                                         transition={{ duration: 0.3 }}
                                     >
-                                        <div className="px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+                                        <div id={`faq-answer-${index}`} className="px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4">
                                             {item.answer}
                                         </div>
                                     </motion.div>

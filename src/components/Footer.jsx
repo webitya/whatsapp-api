@@ -16,7 +16,7 @@ const Footer = () => {
                             <div className="relative w-8 h-8 rounded-full overflow-hidden">
                                 <Image src="/webitya-logo.jpg" alt="Webitya" fill className="object-cover" />
                             </div>
-                            <span className="text-xl font-bold">Webitya.</span>
+                            <span className="text-xl font-bold flex items-end">Webitya<span className="text-brand-green text-3xl leading-none">.</span></span>
                         </Link>
                         <p className="text-gray-400 text-sm leading-relaxed mb-6">
                             Premier WhatsApp Business API partner for Indian SMEs. Automate, engage, and grow with the power of conversational marketing.
