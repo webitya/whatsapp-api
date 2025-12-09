@@ -99,52 +99,98 @@ const Navbar = () => {
                 </div>
             </motion.nav>
 
-            {/* Mobile Menu Overlay */}
+            {/* Premium Mobile Menu Overlay */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ x: '100%' }}
-                        animate={{ x: 0 }}
-                        exit={{ x: '100%' }}
-                        transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                        className="fixed inset-0 bg-[#0b141a] z-50 lg:hidden overflow-y-auto"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="fixed inset-0 z-50 lg:hidden"
                         role="dialog"
                         aria-modal="true"
                         aria-label="Mobile Navigation Menu"
                     >
-                        <div className="flex flex-col items-center justify-center min-h-screen gap-8 p-6 relative">
-                            {/* Close button */}
-                            <button
-                                className="absolute top-6 right-6 text-white/50 hover:text-white p-2 rounded-full bg-white/5 cursor-pointer"
-                                onClick={() => setIsOpen(false)}
-                                aria-label="Close Menu"
-                            >
-                                <CloseIcon fontSize="large" />
-                            </button>
+                        {/* Backdrop */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="absolute inset-0 bg-black/60 backdrop-blur-md"
+                            onClick={() => setIsOpen(false)}
+                        />
 
-                            {['Features', 'Use Cases', 'Pricing', 'FAQ'].map((item) => (
+                        {/* Drawer */}
+                        <motion.div
+                            initial={{ x: '100%' }}
+                            animate={{ x: 0 }}
+                            exit={{ x: '100%' }}
+                            transition={{ type: "spring", damping: 30, stiffness: 300 }}
+                            className="absolute right-0 top-0 bottom-0 w-[85%] max-w-sm bg-[#0b141a] border-l border-white/10 shadow-2xl flex flex-col overflow-hidden"
+                        >
+                            {/* Decorative Elements */}
+                            <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-brand-green/10 blur-[100px] rounded-full pointer-events-none" />
+                            <div className="absolute bottom-0 left-0 w-[200px] h-[200px] bg-blue-500/10 blur-[80px] rounded-full pointer-events-none" />
+
+                            {/* Header */}
+                            <div className="p-6 flex items-center justify-between border-b border-white/5 relative z-10">
+                                <span className="text-xl font-bold text-white flex items-end">
+                                    Webitya<span className="text-brand-green text-3xl leading-none">.</span>
+                                </span>
                                 <button
-                                    key={item}
+                                    className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white transition-colors"
+                                    onClick={() => setIsOpen(false)}
+                                    aria-label="Close Menu"
+                                >
+                                    <CloseIcon />
+                                </button>
+                            </div>
+
+                            {/* Menu Items */}
+                            <div className="flex-1 overflow-y-auto py-8 px-6 flex flex-col gap-6 relative z-10">
+                                {['Features', 'Use Cases', 'Pricing', 'FAQ'].map((item, i) => (
+                                    <motion.button
+                                        key={item}
+                                        initial={{ opacity: 0, x: 20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: 0.1 + (i * 0.1) }}
+                                        onClick={() => {
+                                            scrollToSection(item.toLowerCase().replace(' ', '-'));
+                                            setIsOpen(false);
+                                        }}
+                                        className="text-left text-3xl font-bold text-white/50 hover:text-white hover:translate-x-2 transition-all duration-300"
+                                    >
+                                        {item}
+                                    </motion.button>
+                                ))}
+                            </div>
+
+                            {/* Footer / CTA */}
+                            <div className="p-6 border-t border-white/5 bg-black/20 relative z-10">
+                                <motion.button
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.5 }}
                                     onClick={() => {
-                                        scrollToSection(item.toLowerCase().replace(' ', '-'));
+                                        scrollToSection('book-demo');
                                         setIsOpen(false);
                                     }}
-                                    className="text-3xl font-bold text-white hover:text-brand-green transition-colors cursor-pointer"
+                                    className="w-full py-4 bg-brand-green text-black rounded-xl font-bold text-lg shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:shadow-[0_0_30px_rgba(37,211,102,0.5)] transition-all mb-4"
                                 >
-                                    {item}
-                                </button>
-                            ))}
-                            <div className="h-px w-20 bg-white/10 my-4" />
-                            <button
-                                onClick={() => {
-                                    scrollToSection('book-demo');
-                                    setIsOpen(false);
-                                }}
-                                className="w-full max-w-xs py-4 bg-white/5 border border-white/10 text-white rounded-2xl font-bold text-lg cursor-pointer"
-                            >
-                                Book Demo
-                            </button>
-                        </div>
+                                    Book Free Demo
+                                </motion.button>
+
+                                <motion.div
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ delay: 0.6 }}
+                                    className="text-center text-white/30 text-xs"
+                                >
+                                    &copy; {new Date().getFullYear()} Webitya.
+                                </motion.div>
+                            </div>
+                        </motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>
