@@ -21,54 +21,61 @@ const Pricing = () => {
                     <p className="text-gray-400 text-base sm:text-lg mb-10">Pay only for what you use. Zero hidden fees.</p>
 
                     {/* Toggle Switch */}
-                    <div className="flex items-center justify-center gap-4 mb-8">
-                        <span className={`text-sm font-medium transition-colors ${!isYearly ? "text-white" : "text-gray-500"}`}>Monthly</span>
+                    <div className="flex items-center justify-center gap-6 mb-12">
+                        <span className={`text-base font-bold transition-all duration-300 ${!isYearly ? "text-white scale-105" : "text-gray-500"}`}>Monthly</span>
+
                         <button
                             onClick={() => setIsYearly(!isYearly)}
-                            className="w-full h-8 bg-zinc-800 rounded-full p-1 relative transition-colors hover:bg-zinc-700 focus:outline-none cursor-pointer"
+                            className="w-16 h-8 bg-zinc-800 rounded-full p-1 relative transition-colors hover:bg-zinc-700 focus:outline-none cursor-pointer ring-1 ring-white/10"
                             aria-label="Toggle Monthly or Yearly Billing"
                             aria-pressed={isYearly}
                         >
                             <motion.div
-                                animate={{ x: isYearly ? 24 : 0 }}
-                                transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                                className="w-6 h-6 bg-brand-green rounded-full shadow-md"
+                                animate={{ x: isYearly ? 32 : 0 }}
+                                transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                                className="w-6 h-6 bg-brand-green rounded-full shadow-[0_0_15px_rgba(37,211,102,0.5)]"
                             />
                         </button>
-                        <span className={`text-sm font-medium transition-colors ${isYearly ? "text-white" : "text-gray-500"}`}>
-                            Yearly <span className="text-brand-green text-xs font-bold ml-1">(Save 20%)</span>
+
+                        <span className={`text-base font-bold transition-all duration-300 flex items-center gap-2 ${isYearly ? "text-white scale-105" : "text-gray-500"}`}>
+                            Yearly
+                            <span className="px-2 py-0.5 rounded-full bg-brand-green/20 text-brand-green text-[10px] font-black uppercase tracking-wider border border-brand-green/30">
+                                Best Value
+                            </span>
                         </span>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
-                    {/* Standard Plan */}
+                    {/* Standard Plan (Updated Content) */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="w-full p-8 sm:p-10 rounded-[2.5rem] bg-zinc-900/50 border border-zinc-800 hover:border-brand-green/50 transition-all duration-300 relative group overflow-hidden flex flex-col"
+                        className="w-full p-8 sm:p-10 rounded-[2.5rem] bg-zinc-900/50 border border-zinc-800 hover:border-brand-green/50 transition-all duration-300 relative group overflow-hidden flex flex-col hover:shadow-[0_0_50px_rgba(0,0,0,0.5)]"
                     >
                         <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-brand-green/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                         <div className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-brand-green/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
                         <div className="relative z-10 flex-1 flex flex-col">
-                            <h3 className="text-xl font-medium text-gray-400 mb-4">Standard Plan</h3>
+                            <h3 className="text-xl font-medium text-gray-400 mb-4">Starting Plan</h3>
                             <div className="flex items-end gap-1 mb-6">
-                                <span className="text-5xl sm:text-6xl font-black text-white">₹0</span>
-                                <span className="text-gray-400 mb-2 font-medium">/ platform cost</span>
+                                <span className="text-5xl sm:text-6xl font-black text-white">₹12k</span>
+                                <span className="text-gray-400 mb-2 font-medium">/ year</span>
                             </div>
                             <p className="text-sm text-gray-400 mb-10 leading-relaxed">
-                                Perfect for businesses just getting started. Direct integration with Meta's official billing.
+                                Complete WhatsApp Automation solution for growing businesses.
                             </p>
 
-                            <div className="space-y-5 mb-10">
+                            <div className="space-y-4 mb-10">
                                 {[
-                                    "Official WhatsApp API Access",
-                                    "Green Tick Verification Assistance",
-                                    "1000 Free Service Conversations",
-                                    "Unlimited Team Members",
-                                    "Broadcast & Automation Suite"
+                                    "₹3,000 Per Number Verification",
+                                    "12 Paisa / Utility Message",
+                                    "79 Paisa / Promotion Message",
+                                    "12 Months Validity",
+                                    "Official Green Tick Assistance",
+                                    "Unlimited Broadcasts",
+                                    "Chatbot Builder Access"
                                 ].map((feature, i) => (
                                     <div key={i} className="flex items-center gap-3">
                                         <span className="w-5 h-5 rounded-full bg-brand-green/20 flex items-center justify-center text-brand-green shrink-0">
@@ -110,13 +117,14 @@ const Pricing = () => {
                                 Tailored solutions for large organizations. Volume discounts and dedicated support.
                             </p>
 
-                            <div className="space-y-5 mb-10">
+                            <div className="space-y-4 mb-10">
                                 {[
                                     "Custom API Integration",
                                     "Dedicated Account Manager",
                                     "Priority Support (24/7 SLA)",
                                     "Custom Reporting & Analytics",
-                                    "On-Premise Deployment Option"
+                                    "On-Premise Deployment Option",
+                                    "Advanced Role Management"
                                 ].map((feature, i) => (
                                     <div key={i} className="flex items-center gap-3">
                                         <span className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-white shrink-0">
