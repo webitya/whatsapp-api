@@ -351,7 +351,7 @@ const Hero = () => {
     const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
     return (
-        <section ref={ref} id="home" className="relative w-full min-h-screen flex items-center pt-40 pb-12 lg:py-0 overflow-hidden perspective-1000">
+        <section ref={ref} id="home" className="relative w-full min-h-screen flex items-center pt-28 lg:pt-44 pb-12 overflow-hidden perspective-1000">
             {/* Dynamic Background */}
             <div className="absolute inset-0 z-0" aria-hidden="true">
                 <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] pointer-events-none mix-blend-overlay"></div>

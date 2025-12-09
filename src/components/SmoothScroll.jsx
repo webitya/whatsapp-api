@@ -11,9 +11,9 @@ export default function SmoothScroll({ children }) {
             direction: "vertical",
             gestureDirection: "vertical",
             smooth: true,
-            mouseMultiplier: 0.8, // Lower multiplier for heavier, smoother feel
-            smoothTouch: true, // Enable smooth touch for "feature touch" on mobile
-            touchMultiplier: 1.5,
+            mouseMultiplier: 0.8,
+            smoothTouch: false, // Disabled to fix "stuck/laggy" feel on mobile. Native scroll is best for touch.
+            touchMultiplier: 2,
         });
 
         function raf(time) {
