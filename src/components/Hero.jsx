@@ -299,7 +299,7 @@ const DashboardSimulation = () => {
                     y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
                     default: { duration: 0.5 }
                 }}
-                className="absolute top-24 -right-12 lg:-right-6 bg-[#202c33]/90 backdrop-blur-xl border border-brand-green/30 p-4 rounded-2xl shadow-2xl z-40 flex items-center gap-4 hover:scale-105 transition-transform cursor-pointer ring-1 ring-brand-green/20 group"
+                className="absolute top-24 -right-12 lg:-right-6 bg-[#202c33]/90 backdrop-blur-xl border border-brand-green/30 p-4 rounded-2xl shadow-2xl z-40 hidden lg:flex items-center gap-4 hover:scale-105 transition-transform cursor-pointer ring-1 ring-brand-green/20 group"
             >
                 {/* Pulse effect behind */}
                 <div className="absolute inset-0 bg-brand-green/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all -z-10" />
@@ -325,7 +325,7 @@ const DashboardSimulation = () => {
                     y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 },
                     default: { duration: 0.5, delay: 0.2 }
                 }}
-                className="absolute bottom-40 -left-12 lg:-left-6 bg-[#202c33]/90 backdrop-blur-xl border border-blue-500/30 p-4 rounded-2xl shadow-2xl z-40 flex items-center gap-4 hover:scale-105 transition-transform cursor-pointer ring-1 ring-blue-500/20 group"
+                className="absolute bottom-40 -left-12 lg:-left-6 bg-[#202c33]/90 backdrop-blur-xl border border-blue-500/30 p-4 rounded-2xl shadow-2xl z-40 hidden lg:flex items-center gap-4 hover:scale-105 transition-transform cursor-pointer ring-1 ring-blue-500/20 group"
             >
                 {/* Blue Pulse effect behind */}
                 <div className="absolute inset-0 bg-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all -z-10" />
@@ -351,7 +351,7 @@ const Hero = () => {
     const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
     return (
-        <section ref={ref} id="home" className="relative w-full min-h-screen flex items-center pt-28 lg:pt-44 pb-12 overflow-hidden perspective-1000">
+        <section ref={ref} id="home" className="relative w-full min-h-screen flex items-center pt-28 lg:pt-32 pb-12 overflow-hidden perspective-1000">
             {/* Dynamic Background */}
             <div className="absolute inset-0 z-0" aria-hidden="true">
                 <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] pointer-events-none mix-blend-overlay"></div>
