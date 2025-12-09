@@ -3,25 +3,13 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const words = ["Automate", "Engage", "Grow", "Webitya."];
-
 export default function Preloader() {
-    const [index, setIndex] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        if (index == words.length - 1) return;
-
-        setTimeout(() => {
-            setIndex(index + 1);
-        }, 200); // Speed of word switching
-    }, [index]);
-
-    useEffect(() => {
-        // Simulate loading time or wait for words to finish
         const timer = setTimeout(() => {
             setIsLoading(false);
-        }, 2000); // Total splash screen time
+        }, 1200); // Reduced duration for "little seconds"
         return () => clearTimeout(timer);
     }, []);
 
@@ -33,16 +21,14 @@ export default function Preloader() {
                     transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
                     className="fixed inset-0 z-[9999] flex items-center justify-center bg-black"
                 >
-                    <motion.p
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20, transition: { duration: 0.1 } }}
-                        className="text-4xl md:text-6xl font-black text-white"
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 1.1, transition: { duration: 0.2 } }}
+                        className="text-5xl md:text-7xl font-black text-white flex items-end tracking-tighter"
                     >
-                        <span className="text-brand-green mr-2">•</span>
-                        {words[index]}
-                    </motion.p>
+                        Webitya<span className="text-brand-green text-7xl md:text-8xl leading-none">.</span>
+                    </motion.div>
                 </motion.div>
             )}
         </AnimatePresence>
