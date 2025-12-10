@@ -346,9 +346,7 @@ const DashboardSimulation = () => {
 
 const Hero = () => {
     const ref = useRef(null);
-    const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-    const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+
 
     return (
         <section ref={ref} id="home" className="relative w-full min-h-screen flex items-center pt-28 lg:pt-32 pb-12 overflow-hidden perspective-1000">
