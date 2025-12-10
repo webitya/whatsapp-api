@@ -154,7 +154,7 @@ const MobileHero = () => {
                                 <span className="text-[15px]">Start Demo</span>
                                 <ArrowForwardIcon className="text-base" />
                             </div>
-                            <span className="text-[9px] font-medium opacity-80 z-10">Free 14-Day Trial</span>
+
                             <div className="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                         </motion.button>
                     </Link>
