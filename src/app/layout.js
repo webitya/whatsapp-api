@@ -3,6 +3,7 @@ import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import Preloader from "@/components/Preloader";
 import MotionWrapper from "@/components/MotionWrapper";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -138,6 +139,7 @@ export default function RootLayout({ children }) {
               {children}
             </div>
           </MotionWrapper>
+          <WhatsAppButton />
         </SmoothScroll>
       </body>
     </html>

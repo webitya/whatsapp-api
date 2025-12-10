@@ -154,6 +154,7 @@ const MobileHero = () => {
                                 <span className="text-[15px]">Start Demo</span>
                                 <ArrowForwardIcon className="text-base" />
                             </div>
+                            <span className="text-[9px] font-medium opacity-80 z-10">Free 14-Day Trial</span>
                             <div className="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                         </motion.button>
                     </Link>
@@ -161,13 +162,12 @@ const MobileHero = () => {
                     <Link href="#how-it-works" className="w-full">
                         <motion.button
                             whileTap={{ scale: 0.98 }}
-                            className="w-full py-4 bg-[#1f2932]/80 backdrop-blur-sm border border-white/10 text-white font-bold text-sm rounded-xl flex flex-col items-center justify-center gap-1 hover:bg-[#2a3942] transition-colors"
+                            className="w-full py-4 bg-[#1f2932]/80 backdrop-blur-sm border border-white/10 text-white font-bold text-sm rounded-xl flex items-center justify-center gap-1 hover:bg-[#2a3942] transition-colors"
                         >
                             <div className="flex items-center gap-1.5">
                                 <span className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center"><PlayArrowIcon style={{ fontSize: 12 }} /></span>
                                 <span className="text-[15px]">Features</span>
                             </div>
-                            <span className="text-[9px] font-medium text-gray-400">See how it works</span>
                         </motion.button>
                     </Link>
                 </div>
