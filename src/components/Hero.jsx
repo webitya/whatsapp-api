@@ -366,12 +366,12 @@ const Hero = () => {
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center h-full max-w-[1600px] mx-auto">
 
                     {/* Left Content */}
-                    <div className="relative z-20 pt-10 lg:pt-0 text-center lg:text-left">
+                    <div className="relative z-20 pt-16 lg:pt-0 text-center lg:text-left">
                         {/* Badge */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-brand-green/30 bg-brand-green/10 text-brand-green mb-1 sm:mb-2 backdrop-blur-md"
+                            className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-brand-green/30 bg-brand-green/10 text-brand-green mb-6 sm:mb-2 backdrop-blur-md"
                         >
                             <span className="relative flex h-2 w-2">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
@@ -381,22 +381,22 @@ const Hero = () => {
                         </motion.div>
 
                         {/* Main Heading */}
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[1.1] tracking-tight mb-6 sm:mb-8">
+                        <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[1.05] tracking-tight mb-8 sm:mb-8">
                             <span className="block">Automate</span>
-                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-brand-green via-emerald-400 to-brand-green bg-300% animate-shine">
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-brand-green via-emerald-400 to-brand-green bg-300% animate-shine pb-2">
                                 <TextReveal text="Business Growth" delay={0.2} />
                             </span>
-                            <span className="block text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-400 font-bold mt-2 sm:mt-4">
+                            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-400 font-bold mt-2 sm:mt-4">
                                 on WhatsApp
                             </span>
                         </h1>
 
-                        <p className="text-sm sm:text-base md:text-lg text-gray-400 mb-8 sm:mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                        <p className="text-base sm:text-base md:text-lg text-gray-400 mb-10 sm:mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed px-4 sm:px-0">
                             Reach <span className="text-white font-bold">2 Billion+</span> users directly. Automate sales, support, and marketing with the world's most powerful WhatsApp API platform.
                         </p>
 
                         {/* Buttons */}
-                        <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start w-full sm:w-auto">
+                        <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start w-full sm:w-auto px-4 sm:px-0">
                             <Link href="#book-demo" className="w-full sm:w-auto">
                                 <MagneticButton className="w-full sm:w-auto px-8 py-4 sm:px-10 sm:py-5 bg-brand-green text-black font-extrabold text-base sm:text-lg rounded-full shadow-[0_0_50px_rgba(37,211,102,0.4)] flex items-center justify-center gap-2 sm:gap-3 relative overflow-hidden group" aria-label="Start Free Demo">
                                     <span className="relative z-10 flex items-center gap-2">Start Free Demo <ArrowForwardIcon aria-hidden="true" /></span>
@@ -411,7 +411,7 @@ const Hero = () => {
                             </Link>
                         </div>
 
-                        <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-gray-500 justify-center lg:justify-start mt-10 sm:mt-12">
+                        <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-gray-500 justify-center lg:justify-start mt-12 sm:mt-12 px-4 sm:px-0">
                             {["Instant Setup", "Green Tick Verified", "Meta Compliant"].map((text, i) => (
                                 <motion.div
                                     key={i}
@@ -432,7 +432,7 @@ const Hero = () => {
                         initial={{ opacity: 0, rotateY: 30, x: 100 }}
                         animate={{ opacity: 1, rotateY: 0, x: 0 }}
                         transition={{ duration: 1, ease: "circOut" }}
-                        className="relative perspective-1000 h-[350px] sm:h-[450px] lg:h-[550px] w-full mt-12 lg:mt-12"
+                        className="relative perspective-1000 h-[350px] sm:h-[450px] lg:h-[550px] w-full mt-12 lg:mt-12 hidden lg:block"
                         aria-hidden="true"
                     >
                         <DashboardSimulation />
