@@ -101,6 +101,7 @@ body {
   animation: shimmer 1.5s infinite;
 }
 
+
 .hero-glow {
   position: absolute;
   width: 600px;
@@ -111,4 +112,24 @@ body {
   transform: translate(-50%, -50%);
   z-index: -1;
   pointer-events: none;
+}
+
+/* Gradient X Animation */
+@keyframes gradient-x {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 6s ease infinite;
+  background-size: 200% 200%;
 }
