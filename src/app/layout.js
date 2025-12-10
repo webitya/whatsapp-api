@@ -2,6 +2,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import Preloader from "@/components/Preloader";
+import MotionWrapper from "@/components/MotionWrapper";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -132,9 +133,11 @@ export default function RootLayout({ children }) {
         </a>
         <Preloader />
         <SmoothScroll>
-          <div id="main-content">
-            {children}
-          </div>
+          <MotionWrapper>
+            <div id="main-content">
+              {children}
+            </div>
+          </MotionWrapper>
         </SmoothScroll>
       </body>
     </html>
